@@ -1,0 +1,27 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: to_do_development
+  username: postgres
+  password: happy123
+  pool: 5
+  timeout: 5000
+
+test:
+  <<: *default
+  database: to_do_test
+  username: postgres
+  password: happy123
+  pool: 5
+  timeout: 5000
+
+production:
+  <<: *default
+  database: to_do_production
+  username: postgres
+  password: happy123
+  pool: 5
+  timeout: 5000
